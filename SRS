@@ -1,0 +1,187 @@
+\documentclass{proc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{hyperref}
+\title{College-Application-with-Augmented-Reality}
+\author{Mohamed Hamdy - Afnan Talaat - Hasnaa Khaled \\ Sayed Moataz - Mohamed Ahmed - Mohammad kher}
+\begin{document}
+\maketitle
+Workflow details are justified in \href{https://github.com/sayedmoataz/College-Application-with-Augmented-Reality.git}{GitHub-Repo}.
+\section{Introduction}
+A mobile app (Android and IOS) that will interact with college website using ID college card attached to virtual 3D buttons to access the website functionality which will make the website easier to use and even more secure.
+\section{System Features}
+    \subsection{Functional Requirements}
+    
+        \subsubsection{Augmented reality}
+        pop up Augmented reality environment\\Scrap info from website to interact with AR\\compare national id on the Student ID Card with the one on the website
+        
+        \subsubsection{Moderator}
+         Add new student or TA\\Add Courses\\Update Semester timeline\\Make schedule up to date\\Set semester table
+        
+        \subsubsection{student}
+        Register course\\See initial result\\Display exams info (if exist)\\Edit profile(password – full name - national id – pic)\\Open mailbox\\Download semester table
+        
+        \subsubsection{TA}
+        Post on blog\\Add degrees to student
+        
+        \subsubsection{Login}
+        
+        \subsubsection{Logout}
+    \subsection{Non-Functional Requirements}
+    Performance and scalability – how fast could the app react -\\Portability and compatibility\\Reliability \\Availability – only available to college to download -\\maintainability\\Usability
+\section{UML Diagrams}
+    \subsection{Behavioral UML Diagram}
+            \subsubsection{Use Case Diagram}
+            shown in fig \ref{fig:usecase} \\
+                \begin{tabular}{ |p{2.2cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|  }
+                 \hline
+                 \multicolumn{4}{|c|}{Use-Case Description} \\
+                 \hline
+                  & Moderator & TAs &Student\\
+                 \hline
+                 Use Case&Login-Add TAs-Add Courses&Login-Add Degrees-post blog&Login-Register Course-Edit profile\\
+                 \hline
+                 Precondition&Enter Username and password&Enter Username and Password&Enter Username and Password\\
+                 \hline
+                 Basic Flow&Home Page-insert Data-login&Home Page-insert Data-login&Home Page-insert Data-login\\
+                 \hline
+                \end{tabular}
+            \subsubsection{Activity Diagram}
+                shown in fig ~\ref{fig:AdminAct}, ~\ref{TAAct} and ~\ref{fig:StudAct}
+            \subsubsection{Sequence Diagram}
+                shown in fig ~\ref{fig:seqMod}, ~\ref{fig:seqTAs} and ~\ref{fig:seqstu} 
+            \subsubsection{Communication diagram }
+            shown in fig ~\ref{fig:commMod}, ~\ref{fig:commTAs} and ~\ref{fig:commstud}
+            \subsubsection{State Machine diagram}
+            shown in fig ~\ref{fig:statMod}, ~\ref{fig:statTAs} and ~\ref{fig:statStudent}
+    \subsection{Structural UML Diagram}
+        \subsubsection{Class Diagram}
+            shown in fig ~\ref{fig:classDiagram}
+        \subsubsection{Object Diagram}
+            shown in fig ~\ref{fig:adminObj}, ~\ref{fig:TAObj} and ~\ref{fig:StudObj}
+        \subsubsection{Component Diagram}
+            shown in fig ~\ref{fig:Compmod}, ~\ref{fig:Component} and ~\ref{fig:CompTAs}
+\section{Diagrams Photos}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{UseCase.jpeg}
+        \caption{Use Case Diagram}
+        \label{fig:usecase}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{adminAct.jpeg}
+        \caption{Activity Diagram For Admin Module}
+        \label{fig:AdminAct}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{ACtTA.jpeg}
+        \caption{Activity Diagram For TA Module}
+        \label{fig:TAAct}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        %\includegraphics[width=8cm]{}
+        \caption{Activity Diagram For Student Module}
+        \label{fig:StudAct}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{seqMod.png}
+        \caption{Sequence Diagram for Moderator Module}
+        \label{fig:seqMod}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{seqTAs.png}
+        \caption{Sequence Diagram for TAs Module}
+        \label{fig:seqTAs}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{seqStud.png}
+        \caption{Sequence Diagram for Student Module}
+        \label{fig:seqstu}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{commMod.png}
+        \caption{Communication Diagram For Admin module}
+        \label{fig:commMod}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{commTAs.png}
+        \caption{Communication Diagram For TAs module}
+        \label{fig:commTAs}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{commstud.png}
+        \caption{Communication Diagram For Student module}
+        \label{fig:commstud}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{mod.png}
+        \caption{State machine for Moderator Module}
+        \label{fig:statMod}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{TA.png}
+        \caption{State machine for TAs Module}
+        \label{fig:statTAs}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{stud.png}
+        \caption{State machine for Student Module}
+        \label{fig:statStudent}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{class.jpeg}
+        \caption{System Class Diagram}
+        \label{fig:classDiagram}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{Object_Admin.jpeg}
+        \caption{Admin Object Diagram}
+        \label{fig:adminObj}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{TA object Diagram.PNG}
+        \caption{TAs Object Diagram}
+        \label{fig:TAObj}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{Student object diagram.PNG}
+        \caption{Student Object Diagram}
+        \label{fig:StudObj}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{Untitled Diagram (1).png}
+        \caption{Admin Component Diagram}
+        \label{fig:Compmod}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{Untitled Diagram.png}
+        \caption{Student Component Diagram}
+        \label{fig:Component}
+    \end{figure}
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=8cm]{Untitled Diagram (2).png}
+        \caption{TAs Component Diagram}
+        \label{fig:CompTAs}
+    \end{figure}
+\end{document}
